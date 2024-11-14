@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="uk">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Галерея зображень</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.0/dist/basicLightbox.min.css">
-    <style>
         /* Стилі для галереї */
         body {
             font-family: Arial, sans-serif;
@@ -16,37 +8,31 @@
         }
 
         .gallery {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 16px;
-            padding: 20px;
-        }
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
 
-        .gallery-item {
-            position: relative;
-            cursor: pointer;
-        }
+    .gallery-item {
+      width: calc(33.33% - 16px);
+      box-sizing: border-box;
+    }
 
-        .gallery-image {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
-        }
+    .gallery-link {
+      display: block;
+    }
 
-        .gallery-image:hover {
-            transform: scale(1.1);
-        }
-    </style>
-</head>
+    .gallery-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+      transition: transform 0.3s ease-in-out;
+    }
 
-<body>
-
-    <ul class="gallery"></ul>
-
-    <script src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.0/dist/basicLightbox.min.js"></script>
-    <script src="app.js"></script>
-</body>
-
-</html>
+    .gallery-image:hover {
+      transform: scale(1.05);
+    }
