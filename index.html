@@ -1,25 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homework 8</title>
-      <link href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css" rel="stylesheet">
-    
-     
-    <link rel="stylesheet" href="css/styles.css" />
-    
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css" />
-  <script src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css">
+    <style>
+        /* Styles for the gallery */
+        * {
+            box-sizing: border-box;
+        }
 
-  </head>
-  <body>
-   
-      <ul class="gallery"></ul>
-          
-         <script src="./js/gallery.js"></script>
-  </body>
-</html>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
 
+        .gallery {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+            margin: 20px;
+        }
 
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-link {
+            display: block;
+        }
+
+        .gallery-image {
+            width: 100%; /* Ensures the image spans the container */
+            height: auto;
+            display: block; /* Removes bottom whitespace */
+        }
+    </style>
+</head>
+<body>
+
+    <ul class="gallery"></ul>
+
+    <script src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js"></script>
